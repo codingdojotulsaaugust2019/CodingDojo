@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <h1 id="title">My jQuery basic assignment!</h1>
+    <button id="showtime">Show Hidden Title!</button>
+    <div>\
+        <h2> AddClass</h2>
+        <button id="AddClass" value="Cool">AddClass</button>
+        <p>Say stuff right here!</p>
+    </div>
+    <div>\
+        <h2>Slide Toggle</h2>
+        <button id="slideToggle">Slide Toggle</button>
+        <p>Say stuff right here!</p>
+    </div>
+    <div>\
+        <h2>Append</h2>
+        <button id="Append">Append</button>
+        <p>Say stuff right here!</p>
+    </div>
+    <form>
+        <input type="checkbox" name="thebox" value="checked">The Box Is
+    </form>
+    <button id="toggle">Toggle it All</button>
+
+</body>
+<script>
+
+$('#title').click(() => $('#title').hide())
+$("#showtime").click(()=> $('#title').show())
+$("#toggle").click(() => $("div").toggle())
+$("button").addClass("btn")
+console.log($("button").attr("class"))
+console.log($("#title").text())
+console.log($("input").val())
+console.log($("body").html())
+
+</script>
+
+</html>

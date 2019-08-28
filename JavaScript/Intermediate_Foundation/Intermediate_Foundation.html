@@ -1,0 +1,114 @@
+<html></html>
+<script>
+
+//1. Sigma - Implement function sigma(num) that, given a number, returns the sum of all positive integers up to the given number (inclusive).  Ex: sigma(3) = 6 (or 1+2+3); sigma(5) = 15 (or 1+2+3+4+5).
+
+function sigmaDude(num){
+    let i = 0;
+    let sum = 0;
+    while( i <= num){
+        sum += i
+        i++
+    }
+    return sum;
+}
+
+console.log("Question 1: " + sigmaDude(3))
+
+
+//2. Factorial - Write a function factorial(num) that, given a number, returns the product (multiplication) of all positive integers from 1 up to the given number (inclusive).  For example, factorial(3) = 6 (or 1*2*3); factorial(5) = 120 (or 1*2*3*4*5).
+
+function factorial(num){
+    let i = 1
+    let product = 1
+    while(i <= num){
+        product *= i
+        i++
+    }
+    return product
+}
+
+console.log("Question 2: " + factorial(5))
+
+
+//3. Fibonacci
+
+function fib(num) {
+    let fibArr = [0,1]
+    for(let i = 2; i <= num; i++){
+        fibArr.push(fibArr[i-1]+fibArr[i-2])
+
+    }
+    return fibArr[fibArr.length-1]
+}
+
+console.log("Question 3: " + fib(10))
+
+//4. Return the second-to-last element of an array. Given [42, true, 4, "Liam", 7], return "Liam".  If array is too short, return null.
+
+function nextToLast(arr){
+    if(arr.length >= 2){
+    return arr[arr.length-2]
+    }
+    else { return null }
+}
+
+console.log("Question 4: " + nextToLast([1]))
+
+
+//5. Array: Nth-to-Last: Return the element that is N-from-array's-end.  Given ([5,2,3,6,4,9,7],3), return 4.  If the array is too short, return null.
+
+function nthToLast(arr,num){
+    if(arr.length >= num){
+    return arr[arr.length-num]
+    }
+    else { return null }
+}
+
+console.log("Question 5: " + nthToLast([1,4,5,7,5,4],2))
+
+
+//6. Array: Second-Largest: Return the second-largest element of an array. Given [42,1,4,3.14,7], return 7.  If the array is too short, return null.
+
+function secondLargest(arr){
+    if(arr.length >= 2){
+    let newArr = arr.sort((a,b) => a-b)
+    return newArr[newArr.length-2]
+    }
+    else {return null}
+
+}
+console.log("Question 6: " + secondLargest([1,8,9,5,2,6]))
+
+
+//7. Double Trouble: Create a function that changes a given array to list each existing element twice, retaining original order.  Convert [4, "Ulysses", 42, false] to [4,4, "Ulysses", "Ulysses", 42, 42, false, false].
+
+function doubleIt(arr){
+    length = arr.length
+    for(let i = 0; i < length; i++){
+        arr.push(arr[i])
+        arr.push(arr[i])
+    }
+    for(let i = 0; i < length; i++){
+        arr.shift()
+    }
+    return arr
+}
+console.log("Question 7: " + doubleIt([1,2,3,4,5]))
+
+
+//Recursion Fibonacci
+function fib(n){
+    if(n == 0){
+        return 0
+    }
+    if(n ==  1){
+        return 1
+    }
+    else{
+        return fib(n-1) + fib(n-2)
+    }
+}
+
+console.log(fib(5))
+</script>

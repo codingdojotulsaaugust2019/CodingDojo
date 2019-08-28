@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PacMan</title>
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+
+<body>
+
+    <div id='world'></div>
+    <div id='pacman' style='top: 21px; left: 21px;'></div>
+
+        <script>
+
+            var world = [
+                [1,1,1,1,1,1,1,1,1,1],
+                [1,0,2,0,0,0,0,0,0,1],
+                [1,0,0,0,0,2,0,0,0,1],
+                [1,0,0,0,0,2,0,0,0,1],
+                [1,0,0,2,0,0,0,0,0,1],
+                [1,0,0,0,0,0,0,0,0,1],
+                [1,0,0,0,0,0,0,0,0,1],
+                [1,0,0,0,0,0,0,0,0,1],
+                [1,0,0,0,0,0,0,0,0,1],
+                [1,1,1,1,1,1,1,1,1,1]
+            ]
+
+            function displayWorld(){
+                var output = "";
+
+                for (var i = 0; i < world.length;i++){
+                    output += "<div class='row'>"
+                    for(var j = 0; j < world[i].length; j++){
+                        if (world[i][j] == 0){
+                            output += "<div class='empty'></div>"
+                        }
+                        else if (world[i][j] == 1){
+                            output += "<div class='brick'></div>"
+                        }
+                        else if (world[i][j] == 2){
+                            output += "<div class='coin'></div>"
+                        }
+                    }
+                    output += "</div>"
+                }
+
+                console.log(output);
+                document.getElementById("world").innerHTML = output
+            }        
+
+            displayWorld();
+
+            var xMoveRate = 20
+            var yMoveRate = 20
+            var pacmanPosX = 21
+            var pacmanPosY = 21
+            
+            document.onkeydown = function(e){
+                console.log(e.keyCode);
+                if(e.keyCode == 40){
+                    //down
+                    document.getElementById('pacman').style.top = pacmanPosY + yMoveRate + "px"
+                    pacmanPosY += yMoveRate
+
+                }
+                else if(e.keyCode == 39) {
+                    //right
+                    document.getElementById('pacman').style.left = pacmanPosX + xMoveRate + "px"
+                    pacmanPosX += xMoveRate
+                }
+                else if(e.keyCode == 38) {
+                    //up
+                    document.getElementById('pacman').style.top = pacmanPosY - yMoveRate + "px"
+                    pacmanPosY -= yMoveRate
+                    
+                }
+                else if (e.keyCode == 37) {
+                    //left
+                    document.getElementById('pacman').style.left = pacmanPosX - xMoveRate + "px"
+                    pacmanPosX -= xMoveRate
+                }
+            }
+
+        </script>
+
+</body>
+</html>
+
