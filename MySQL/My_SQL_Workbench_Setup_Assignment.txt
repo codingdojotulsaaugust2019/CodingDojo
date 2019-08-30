@@ -1,0 +1,9 @@
+INSERT INTO users (first_name, last_name, handle)
+
+VALUES ('Geoff', 'Schultz', 'gschultz')
+
+SELECT * FROM users WHERE first_name = 'Geoff'
+
+UPDATE users SET last_name = 'SCHULTZ' WHERE first_name = 'Geoff'
+
+DELETE FROM users WHERE id='6'

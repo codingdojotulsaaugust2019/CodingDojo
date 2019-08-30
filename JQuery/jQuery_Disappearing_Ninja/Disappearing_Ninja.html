@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <img src="img/ninja.png">
+        <img src="img/ninja.png">
+        <img src="img/ninja.png">
+        <img src="img/ninja.png">
+        <img src="img/ninja.png">
+        <img src="img/ninja.png">
+        <img src="img/ninja.png">
+        <img src="img/ninja.png">
+    </div>
+    <button id="show">Show Dem Turtles</button>
+
+</body>
+<script>
+
+$('img').css("width", "200px")
+
+$('img:nth-of-type(1)').click(() => $('img:nth-of-type(1)').hide())
+$('img:nth-of-type(2)').click(() => $('img:nth-of-type(2)').hide())
+$('img:nth-of-type(3)').click(() => $('img:nth-of-type(3)').hide())
+$('img:nth-of-type(4)').click(() => $('img:nth-of-type(4)').hide())
+$('img:nth-of-type(5)').click(() => $('img:nth-of-type(5)').hide())
+$('img:nth-of-type(6)').click(() => $('img:nth-of-type(6)').hide())
+$('img:nth-of-type(7)').click(() => $('img:nth-of-type(7)').hide())
+$('img:nth-of-type(8)').click(() => $('img:nth-of-type(8)').hide())
+
+$('#show').click(() => $('img').show())
+
+</script>
+
+</html>

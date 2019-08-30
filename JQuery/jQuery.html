@@ -29,7 +29,7 @@
         <p>Say stuff right here!</p>
     </div>
     <form>
-        <input type="checkbox" name="thebox" value="checked">The Box Is
+        <input type="checkbox" name="thebox" value="Red Baron">The Box Is
     </form>
     <button id="toggle">Toggle it All</button>
 
@@ -40,7 +40,7 @@ $('#title').click(() => $('#title').hide())
 $("#showtime").click(()=> $('#title').show())
 $("#toggle").click(() => $("div").toggle())
 $("button").addClass("btn")
-console.log($("button").attr("class"))
+$("button").click(() => console.log($("button").attr("class")))
 console.log($("#title").text())
 console.log($("input").val())
 console.log($("body").html())
