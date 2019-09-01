@@ -1,0 +1,31 @@
+pip list
+
+    lists the installed packages in the environment
+
+deactivate
+
+    deactivates our  python environment
+
+pip3 list
+
+    lists the installed packages, no difference in my output as i have not added any additional
+
+call py3Env/scripts/activate
+
+    activates the python environment named in the command
+
+pip install Django==1.11.9
+
+    installed Django package. ran through the script and output confirmation of install.
+
+    pip list now lists Django and pytz
+
+    pip3 list now only lists the default setuptools and pip packages
+
+pip freeze
+
+    outputs only non default packages
+
+    "Freezing is a process where pip reads the versions of all installed packages in a local virtual environment and then produces a text file with the package version for each python package specified"
+
+    
